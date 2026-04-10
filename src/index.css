@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Timeline library dark theme overrides */
+.vertical-timeline::before {
+  background: #334155 !important;
+}
+
+.vertical-timeline-element-content {
+  background: #1e293b !important;
+  border: 1px solid #334155 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 12px !important;
+}
+
+.vertical-timeline-element-content-arrow {
+  border-right-color: #334155 !important;
+}
+
+.vertical-timeline-element-content h3 {
+  color: #f1f5f9 !important;
+  font-weight: 600 !important;
+}
+
+.vertical-timeline-element-content h4 {
+  color: #94a3b8 !important;
+  font-weight: 400 !important;
+}
+
+.vertical-timeline-element-content p {
+  color: #cbd5e1 !important;
+  font-size: 14px !important;
+  margin-top: 8px !important;
+}
+
+.vertical-timeline-element-date {
+  color: #94a3b8 !important;
+}
+
+/* Glass card utility */
+.glass-card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  border-radius: 12px;
+}
+
+/* Fade-in animation */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
