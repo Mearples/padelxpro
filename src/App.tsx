@@ -1,6 +1,7 @@
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import ProfileSummary from './components/profile/ProfileSummary';
+import Education from './components/profile/Education';
 import CareerTimeline from './components/timeline/CareerTimeline';
 import CompetencyRadar from './components/skills/CompetencyRadar';
 import MarketDynamics from './components/market/MarketDynamics';
@@ -12,6 +13,10 @@ function App() {
       <Header />
       <main>
         <ProfileSummary />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <hr className="border-slate-800" />
+        </div>
+        <Education />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <hr className="border-slate-800" />
         </div>

@@ -80,3 +80,10 @@ export interface CompanyType {
   name: string;
   description: string;
 }
+
+export interface Education {
+  institution: string;
+  degree: string;
+  year: string;
+  detail: string;
+}
