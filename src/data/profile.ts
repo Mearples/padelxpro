@@ -1,4 +1,4 @@
-import type { ProfileStat } from '../types';
+import type { ProfileStat, Education } from '../types';
 
 export const profileStats: ProfileStat[] = [
   {
@@ -39,7 +39,7 @@ export const profileStats: ProfileStat[] = [
   },
 ];
 
-export const education = [
+export const education: Education[] = [
   {
     institution: 'ESADE Business & Law School',
     degree: 'International Exchange MBA',
