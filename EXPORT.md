@@ -77,9 +77,17 @@ it bypasses Row Level Security.
 - JSON columns, arrays, and dates are preserved sensibly in both formats
   (CSV cells are properly quoted/escaped; JSON keeps native types).
 - Mode B pages through large tables 1,000 rows at a time.
-- Want a full SQL/`pg_dump` backup instead of per-table files? With the same
-  connection string:
+- Want a full SQL/`pg_dump` backup instead of per-table files? If you have
+  the PostgreSQL client tools installed, run:
 
   ```bash
-  pg_dump "$SUPABASE_DB_URL" --no-owner --no-privileges -f padelxpro-backup.sql
+  npm run db:dump
+  ```
+
+  This reads `SUPABASE_DB_URL` (from your shell or `.env`) and writes a single
+  restorable `exports/<timestamp>-padelxpro-backup.sql` containing schema +
+  data. Restore it elsewhere with:
+
+  ```bash
+  psql "$SUPABASE_DB_URL" -f exports/<timestamp>-padelxpro-backup.sql
   ```

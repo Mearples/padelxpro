@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "db:export": "node scripts/export-supabase.mjs"
+    "db:export": "node scripts/export-supabase.mjs",
+    "db:dump": "bash scripts/dump-supabase.sh"
   },
   "optionalDependencies": {
     "pg": "^8.13.1"
